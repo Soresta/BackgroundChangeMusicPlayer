@@ -7,6 +7,7 @@ Nyala, JavaFX kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Masa
 
 ## Video
 - **Aşşağıdaki Fotoğrafa Tıklayarak Kurulum Ve Tanıtım Videosuna Ulaşabilirsiniz.**
+
 [![Kurulum ve Tanıtım Videosu](https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/56ebed8a-05cf-492d-8889-2a62543e2342)
 ](https://www.youtube.com/watch?v=_594m9Z2QF8&t=197s)
 

@@ -6,7 +6,10 @@ Nyala, JavaFX kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Masa
 ![Ekran görüntüsü 2024-01-11 142115](https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/e8bf8598-172c-46e1-9155-96bb0aa1a283)
 
 ## Video
-![fram6](https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/1077c7a9-3527-4f18-8939-46a43b957c84)](https://www.youtube.com/watch?v=_594m9Z2QF8&t=197s)
+[![Video Açıklaması]https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/90f36a97-4ddf-4107-bb9e-6976a6779209)
+(https://www.youtube.com/watch?v=_594m9Z2QF8&t=197s)
+
+
 
 ## Özellikler
 

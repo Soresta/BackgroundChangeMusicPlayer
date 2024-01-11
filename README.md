@@ -1,4 +1,4 @@
-![fram6](https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/77c60251-7377-434c-9bcb-0bfe6869cc0e)# Nyala Masaüstü Uygulaması
+# Nyala Masaüstü Uygulaması
 
 Nyala, JavaFX kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Masaüstü arka planlarını değiştirebilme ve müzik çalabilme özellikleriyle kullanıcı dostu bir deneyim sunar.
 ## Ekran Görüntüleri
@@ -6,7 +6,8 @@ Nyala, JavaFX kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Masa
 ![Ekran görüntüsü 2024-01-11 142115](https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/e8bf8598-172c-46e1-9155-96bb0aa1a283)
 
 ## Video
-[![Video Açıklaması](https://raw.githubusercontent.com/Soresta/BackgroundChangerWithMusicPlayerApp/main/assets/112137968/d23cb53e-6205-4fc6-be28-b3408d92e486.jpg)](https://www.youtube.com/watch?v=_594m9Z2QF8&t=197s)
+[![Kurulum ve Tanıtım Videosu](https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/56ebed8a-05cf-492d-8889-2a62543e2342)
+](https://www.youtube.com/watch?v=_594m9Z2QF8&t=197s)
 
 
 

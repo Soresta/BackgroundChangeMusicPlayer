@@ -30,7 +30,11 @@ Nyala, JavaFX kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Masa
 - JDK 21
 
 ## Kurulum
-1.Klasörde bulunan App.exe dosyasını indirin ve kullanmaya başlayın.
+1.Klasörde bulunan App.exe dosyasını tıklayın . 
+![Ekran görüntüsü 2024-01-11 143748](https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/17af0f31-97e5-4b94-9807-e75e00767b73)
+2.Açılan sayfada sağ üst köşede bulunan indirme düğmesinden indirin ve kurun.
+![Ekran görüntüsü 2024-01-11 143659](https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/54934065-84d3-49ac-8528-76b95c2e2131)
+3.Uygulama kullanıma hazırdır, iyi deneyimler!
 
 ## Kullanım
 

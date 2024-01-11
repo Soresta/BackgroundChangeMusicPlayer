@@ -7,7 +7,7 @@ Nyala, JavaFX kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Masa
 
 ## Video
 
-[[(url)](https://www.youtube.com/watch?v=_594m9Z2QF8)
+(https://www.youtube.com/watch?v=_594m9Z2QF8)
 
 ## Özellikler
 

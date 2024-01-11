@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sorest.bgchanger.Controller">
+   <children>
+      <AnchorPane layoutX="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: rgb(46,46,46);">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="900.0" style="-fx-background-color: rgb(27,27,27);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" graphicTextGap="6.0" layoutX="14.0" prefHeight="60.0" prefWidth="200.0" text="NYALA" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/logo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Text fill="WHITE" layoutX="182.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="by Sorest" wrappingWidth="63.73675537109375">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="minimizeButton" fitHeight="40.0" fitWidth="40.0" layoutX="796.0" layoutY="10.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../sorest/bgchanger/icons/minimizeWhite.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="closeButton" fitHeight="40.0" fitWidth="40.0" layoutX="846.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../sorest/bgchanger/icons/closeWhite.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="742.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/darkmode.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutY="500.0" prefHeight="100.0" prefWidth="900.0" style="-fx-background-color: rgb(27,27,27);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXSlider fx:id="soundSlider" layoutX="735.0" layoutY="57.0" prefHeight="14.0" prefWidth="151.0" value="50.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXSlider>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="59.0" layoutY="50.0" onMouseClicked="#reset" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/repeat.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="49.0" onMouseClicked="#Stop" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/stop.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="playButton" fitHeight="30.0" fitWidth="30.0" layoutX="435.0" layoutY="50.0" onMouseClicked="#PlayOrPause" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/play.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="385.0" layoutY="50.0" onMouseClicked="#previousMedia" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/previious.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="485.0" layoutY="50.0" onMouseClicked="#nextMedia" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/next.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="muteButton" fitHeight="30.0" fitWidth="30.0" layoutX="690.0" layoutY="50.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/sesDefault.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Text fx:id="movingText" fill="WHITE" layoutX="114.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="190.13665771484375">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <StackPane layoutX="10.0" layoutY="22.0" prefHeight="10.0" prefWidth="880.0">
+                     <children>
+                        <ProgressBar fx:id="progressBar" prefHeight="5.0" prefWidth="880.0" progress="0.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ProgressBar>
+                        <Slider fx:id="musicSlider" prefHeight="10.0" prefWidth="850.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Slider>
+                     </children>
+                  </StackPane>
+               </children>
+            </Pane>
+            <JFXButton fx:id="backgroundChoser" buttonType="RAISED" layoutX="14.0" layoutY="140.0" onAction="#apear" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: rgb(27,27,27);" text="Arkaplan" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="365.0" onAction="#Apply" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: rgb(27,27,27);" text="Onayla" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="colorChoser" buttonType="RAISED" layoutX="14.0" layoutY="290.0" onAction="#apear" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: rgb(27,27,27);" text="Renk" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="soundChoser" buttonType="RAISED" layoutX="14.0" layoutY="215.0" onAction="#apear" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: rgb(27,27,27);" text="Müzik" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fx:id="myImageView" fitHeight="360.0" fitWidth="640.0" layoutX="235.0" layoutY="105.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../sorest/bgchanger/icons/defaultBg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="picturePane" layoutY="164.0" prefHeight="272.0" prefWidth="286.0" style="-fx-background-color: rgb(46,46,46);" visible="false">
+         <children>
+            <Pane prefHeight="86.0" prefWidth="286.0" style="-fx-background-color: rgb(27,27,27);">
+               <children>
+                  <ChoiceBox fx:id="speedBox" layoutX="57.0" layoutY="43.0" prefHeight="25.0" prefWidth="176.0" />
+                  <Text fill="WHITE" layoutX="75.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Geçiş hızı" textAlignment="CENTER" wrappingWidth="140.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="233.0" layoutY="5.0" onMouseClicked="#disapear" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../sorest/bgchanger/icons/closeWhite.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" layoutX="55.0" layoutY="106.0" onAction="#PictureFileSelector" prefHeight="60.0" prefWidth="176.0" style="-fx-background-color: rgb(27,27,27);" text="Tekli" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="55.0" layoutY="188.0" onAction="#DirectoryFileSelector" prefHeight="60.0" prefWidth="176.0" style="-fx-background-color: rgb(27,27,27);" text="Slayt" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="soundPane" layoutY="164.0" prefHeight="272.0" prefWidth="286.0" style="-fx-background-color: rgb(46,46,46);" visible="false">
+         <children>
+            <Pane prefHeight="86.0" prefWidth="286.0" style="-fx-background-color: rgb(27,27,27);">
+               <children>
+                  <ChoiceBox fx:id="musicTimer" layoutX="57.0" layoutY="43.0" prefHeight="25.0" prefWidth="176.0" />
+                  <Text fill="WHITE" layoutX="75.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Çalma süresi" textAlignment="CENTER" wrappingWidth="140.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="233.0" layoutY="5.0" onMouseClicked="#disapear" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../sorest/bgchanger/icons/closeWhite.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" layoutX="55.0" layoutY="106.0" onAction="#MusicFileSelector" prefHeight="60.0" prefWidth="176.0" style="-fx-background-color: rgb(27,27,27);" text="Müzik" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="55.0" layoutY="188.0" onAction="#playlistPlayer" prefHeight="60.0" prefWidth="176.0" style="-fx-background-color: rgb(27,27,27);" text="Playlist" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="colorPane" layoutY="164.0" prefHeight="272.0" prefWidth="286.0" style="-fx-background-color: rgb(46,46,46);" visible="false">
+         <children>
+            <Pane prefHeight="86.0" prefWidth="286.0" style="-fx-background-color: rgb(27,27,27);">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="233.0" layoutY="5.0" onMouseClicked="#disapear" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../sorest/bgchanger/icons/closeWhite.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ColorPicker fx:id="color" layoutX="55.0" layoutY="31.0" prefHeight="25.0" prefWidth="176.0" />
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" layoutX="55.0" layoutY="188.0" onAction="#renkAyarla" prefHeight="60.0" prefWidth="176.0" style="-fx-background-color: rgb(27,27,27);" text="Ayarla" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

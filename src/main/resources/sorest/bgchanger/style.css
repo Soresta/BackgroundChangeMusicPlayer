@@ -1,0 +1,28 @@
+#musicSlider .track{
+    -fx-background-color: transparent;
+}
+#musicSlider .thumb{
+    -fx-pref-height: 15px;
+    -fx-pref-width: 15px;
+    -fx-background-color: #65d06c;
+}
+
+.progress-bar .track{
+    -fx-background-radius: 0;
+}
+
+.button:hover{
+    -fx-background-color: yellow;
+}
+
+.progress-bar .bar{
+    -fx-background-color: #c4663f;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0px;
+}
+
+#minimizeButton:hover,
+#closeButton:hover,
+#muteButton:hover {
+    -fx-effect: dropshadow(gaussian, #ffffff, 5, 0.2, 0, 0);
+}

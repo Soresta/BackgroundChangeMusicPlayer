@@ -1,0 +1,75 @@
+.button {
+    -fx-background-color: #D8D9E9;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: white;
+}
+
+.button:pressed {
+    -fx-background-color: #E7E8F2;
+    -fx-background-insets: 1, 2, 3, 1;
+}
+
+.slider {
+    -fx-background-radius: 5; /* Köşeleri yuvarlama */
+}
+
+.slider .thumb {
+    -fx-padding: 0;
+    -fx-pref-height: 10px;
+    -fx-pref-width: 10px;
+    -fx-background-color: red;
+}
+
+.slider .track {
+    -fx-background-color: transparent;
+}
+
+.slider .track-background {
+    -fx-background-color: #B199E0; /* Slider track arka plan rengi */
+    -fx-background-radius: 6; /* Track arka plan köşeleri yuvarlama */
+}
+
+
+#soundSlider {
+    -fx-background-radius: 5; /* Köşeleri yuvarlama */
+}
+
+#soundSlider .thumb {
+    -fx-padding: 0;
+    -fx-background-color: green;
+}
+
+#soundSlider .track {
+
+    -fx-background-color: #B199E0;
+    -fx-background-radius: 6;
+}
+
+#soundSlider .track-background {
+    -fx-background-color: #B199E0; /* Slider track arka plan rengi */
+    -fx-arc-height: 12;
+    -fx-background-radius: 6; /* Track arka plan köşeleri yuvarlama */
+}
+
+
+.progress-bar .track {
+    -fx-background-radius: 6;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #B199E0;
+    -fx-background-radius: 6;
+    -fx-background-insets: 0px;
+}
+
+#addPlaylist {
+    -fx-background-color: #B199E0;
+}
+
+#addPlaylist:hover {
+    -fx-background-color: #756AB6;
+}

@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #D8D9E9; -fx-background-radius: 30;" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sorest.bgchanger.scene2Controller">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true" smooth="false" />
+      <AnchorPane layoutX="20.0" layoutY="615.0" prefHeight="70.0" prefWidth="1160.0" style="-fx-background-color: #EAEDF1; -fx-background-radius: 10;" AnchorPane.bottomAnchor="14.599999999999994" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="12.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="668.0" layoutY="25.0" onMouseClicked="#forward10sn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons1/next10sc.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="620.0" layoutY="21.0" onMouseClicked="#nextMedia" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons1/next.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="playButton" fitHeight="58.0" fitWidth="52.0" layoutX="558.0" layoutY="14.0" onMouseClicked="#PlayOrPause" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons1/playGreen.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="510.0" layoutY="21.0" onMouseClicked="#previousMedia" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons1/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="470.0" layoutY="25.0" onMouseClicked="#backword10sn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons1/back10sc.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="38.0" layoutX="17.0" layoutY="21.0" onMouseClicked="#Stop" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="1113.0">
+               <image>
+                  <Image url="@icons1/stop.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="69.0" layoutY="30.0" onMouseClicked="#reset" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="69.0">
+               <image>
+                  <Image url="@icons1/replay.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="muteButton" fitHeight="38.0" fitWidth="38.0" layoutX="934.0" layoutY="21.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="196.0">
+               <image>
+                  <Image url="@icons1/unMute.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fx:id="movingText" fill="#1b1b21" layoutX="123.0" layoutY="45.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="300.0">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Text>
+            <ProgressBar fx:id="progressBar" layoutX="6.0" layoutY="2.0" prefHeight="6.0" prefWidth="1155.0" progress="0.0" />
+            <Slider fx:id="musicSlider" layoutX="6.0" prefHeight="10.0" prefWidth="1155.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.7999999999999545">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Slider>
+            <JFXSlider fx:id="soundSlider" layoutX="990.0" layoutY="35.0" showTickMarks="true" AnchorPane.rightAnchor="38.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXSlider>
+         </children>
+         <effect>
+            <DropShadow height="4.0" radius="1.5" width="4.0">
+               <color>
+                  <Color red="0.4588235318660736" green="0.4156862795352936" blue="0.7137255072593689" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="205.0" layoutY="20.0" prefHeight="580.0" prefWidth="790.0" style="-fx-background-color: #E7E8F2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="204.60000000000002" AnchorPane.topAnchor="20.0">
+         <children>
+            <ImageView fx:id="myImageView" fitHeight="300.0" fitWidth="510.0" layoutX="14.0" layoutY="59.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Pictures/1.jpg" />
+               </image>
+               <clip>
+                  <Rectangle arcHeight="20" arcWidth="20" height="300.0" width="510.0" />
+               </clip>
+            </ImageView>
+            <ImageView fx:id="imageNo2" fitHeight="140.0" fitWidth="240.0" layoutX="14.0" layoutY="417.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Pictures/7.jpg" />
+               </image>
+               <clip>
+                  <Rectangle arcHeight="20" arcWidth="20" height="140.0" width="240.0" />
+               </clip>
+            </ImageView>
+            <ImageView fx:id="imageNo3" fitHeight="140.0" fitWidth="240.0" layoutX="273.0" layoutY="417.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Pictures/2.jpg" />
+               </image>
+               <clip>
+                  <Rectangle arcHeight="20" arcWidth="20" height="140.0" width="240.0" />
+               </clip>
+            </ImageView>
+            <ImageView fx:id="imageNo4" fitHeight="140.0" fitWidth="240.0" layoutX="530.0" layoutY="417.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Pictures/4.jpg" />
+               </image>
+               <clip>
+                  <Rectangle arcHeight="20" arcWidth="20" height="140.0" width="240.0" />
+               </clip>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="150.0" text="Home" textFill="#1b1b21">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@icons1/icons8-home-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="625.0" layoutY="14.0" prefHeight="30.0" prefWidth="150.0" text="By Sorest" AnchorPane.rightAnchor="14.999999999999972">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@icons1/sorest.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7173489332199097" green="0.6590643525123596" blue="0.7263157963752747" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.40684211254119873" green="0.028070176020264626" blue="0.4736842215061188" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <VBox fx:id="MusicsList" layoutX="546.0" layoutY="59.0" prefHeight="300.0" prefWidth="223.0" AnchorPane.rightAnchor="21.19999999999999" AnchorPane.topAnchor="59.0">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="129.0" text="Selected Playlist" textFill="#a9a9b8">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="45.0" prefWidth="202.0" style="-fx-background-radius: 5;" text="•  Alan Wake" textFill="#1b1b21">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/like.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="45.0" prefWidth="202.0" style="-fx-background-radius: 5;" text="•  Royalty" textFill="#1b1b21">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/like.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="45.0" prefWidth="202.0" style="-fx-background-radius: 5; " text="•  Darkside" textFill="#1b1b21">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/like.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="45.0" prefWidth="202.0" style="-fx-background-radius: 5; " text="•  Mocking Bird" textFill="#1b1b21">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/like.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="45.0" prefWidth="202.0" style="-fx-background-radius: 5;" text="•  Faded" textFill="#1b1b21">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/like.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <Label layoutX="14.0" layoutY="374.0" prefHeight="30.0" prefWidth="240.0" text="Next Backgrounds" textFill="#1b1b21">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@icons1/bgimage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow height="5.0" radius="2.0" width="5.0">
+               <color>
+                  <Color red="0.4588235318660736" green="0.4156862795352936" blue="0.7137255072593689" />
+               </color>
+            </DropShadow>
+         </effect></AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="20.0" prefHeight="580.0" prefWidth="195.0" AnchorPane.bottomAnchor="100.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="150.0" text="Nyala Music" textFill="#1b1b21">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <Image url="@icons1/nameIcon.png" /> <!-- Replace with the actual path to your image -->
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox layoutX="20.0" layoutY="120.0" prefHeight="135.0" prefWidth="150.0">
+               <children>
+                  <Button fx:id="backgroundChoser" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#apear" prefHeight="45.0" prefWidth="150.0" text="Background" textFill="#1b1b21">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <Image url="@icons1/bgimage.png" /> <!-- Replace with the actual path to your image -->
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="soundChoser" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#apear" prefHeight="45.0" prefWidth="150.0" text="Music" textFill="#1b1b21">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <Image url="@icons1/musicimage.png" /> <!-- Replace with the actual path to your image -->
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Apply" prefHeight="45.0" prefWidth="150.0" text="Apply" textFill="#1b1b21">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <Image url="@icons1/applyimage.png" /> <!-- Replace with the actual path to your image -->
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <Label layoutX="20.0" layoutY="90.0" prefHeight="30.0" prefWidth="150.0" text="Changes" textFill="#a9a9b8">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="290.0" prefHeight="30.0" prefWidth="150.0" text="Main Settings" textFill="#a9a9b8">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+            <VBox fx:id="picturePane" layoutX="20.0" layoutY="320.0" prefHeight="135.0" prefWidth="150.0" visible="false">
+               <children>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#PictureFileSelector" prefHeight="45.0" prefWidth="150.0" text="Picture" textFill="#1b1b21">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/bgimage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#DirectoryFileSelector" prefHeight="45.0" prefWidth="150.0" text="Slayt" textFill="#1b1b21">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/slayt.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" text="Internet" textFill="#1b1b21">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/connection.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox fx:id="soundPane" layoutX="20.0" layoutY="320.0" prefHeight="135.0" prefWidth="150.0" visible="false">
+               <children>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#MusicFileSelector" prefHeight="45.0" prefWidth="150.0" text="Music" textFill="#1b1b21">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/musicimage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#playlistPlayer" prefHeight="45.0" prefWidth="150.0" text="Playlist" textFill="#1b1b21">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/playlistpurple.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" text="Internet" textFill="#1b1b21">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/connection.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <Button fx:id="addPlaylist" alignment="BASELINE_LEFT" graphicTextGap="6.0" layoutX="20.0" layoutY="528.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" text="New Playlist" textFill="WHITE" AnchorPane.bottomAnchor="6.399999999999999">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="addIcon" fitHeight="22.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@addColor2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1008.0" layoutY="340.0" prefHeight="260.0" prefWidth="180.0" style="-fx-background-color: #E7E8F2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="340.0">
+         <children>
+            <Label alignment="CENTER" layoutX="15.0" layoutY="14.0" prefHeight="30.0" prefWidth="150.0" text="Activity" textFill="#756ab6">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <InnerShadow height="5.0" radius="2.0" width="5.0">
+               <color>
+                  <Color red="0.4588235318660736" green="0.4156862795352936" blue="0.7137255072593689" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="1008.0" layoutY="67.0" prefHeight="260.0" prefWidth="180.0" style="-fx-background-color: #D8D9E9; -fx-background-radius: 20;" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="67.0">
+         <children>
+            <Label alignment="BASELINE_LEFT" layoutX="15.0" layoutY="14.0" prefHeight="30.0" prefWidth="150.0" text="Slayt Settings" textFill="#a9a9b8">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+            <VBox layoutX="15.0" layoutY="62.0" prefHeight="180.0" prefWidth="150.0">
+               <children>
+                  <Button fx:id="pauseBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#pausePictures" prefHeight="45.0" prefWidth="150.0" text="Pause" textFill="#756ab6">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgControl" fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/pause.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#backImage" prefHeight="45.0" prefWidth="150.0" text="Back" textFill="#756ab6">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/backPicture.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nextImage" prefHeight="45.0" prefWidth="150.0" text="Next" textFill="#756ab6">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@icons1/nextPicture.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ComboBox fx:id="speedBox" prefHeight="26.0" prefWidth="119.0" promptText="Speed" style="-fx-background-color: white;">
+                     <VBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="5.0" radius="2.0" width="5.0">
+                           <color>
+                              <Color red="0.5642634630203247" green="0.06960000097751617" blue="0.8700000047683716" />
+                           </color>
+                        </DropShadow>
+                     </effect></ComboBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="closeButton" fitHeight="30.0" fitWidth="30.0" layoutX="1150.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0">
+         <image>
+            <Image url="@icons1/statusRed.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="fullScreen" fitHeight="30.0" fitWidth="30.0" layoutX="1120.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0">
+         <image>
+            <Image url="@icons1/statusBlue.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="minimizeButton" fitHeight="30.0" fitWidth="30.0" layoutX="1090.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="80.0">
+         <image>
+            <Image url="@icons1/status.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

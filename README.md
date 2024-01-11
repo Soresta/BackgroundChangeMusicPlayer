@@ -5,6 +5,10 @@ Nyala, JavaFX kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Masa
 
 ![Ekran görüntüsü 2024-01-11 142115](https://github.com/Soresta/BackgroundChangerWithMusicPlayerApp/assets/112137968/e8bf8598-172c-46e1-9155-96bb0aa1a283)
 
+## Video
+
+[[Video](url)](https://www.youtube.com/watch?v=_594m9Z2QF8)
+
 ## Özellikler
 
 - **Masaüstü Arka Planları:**
@@ -50,11 +54,6 @@ Nyala, JavaFX kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Masa
 3. Genel Kontroller:
    - Ses ayarlarını düzenlemek için ses düğmelerini kullanın.
    - Müziği başlatmak, duraklatmak, kaldırmak için ilgili düğmeleri kullanın.
-
-## Video
-
-[Video](url)
-
 ## Lisans
 
 Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
